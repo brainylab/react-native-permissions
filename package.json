@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/react-native-permissions",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Get Device Permissions",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -55,7 +55,8 @@
   },
   "homepage": "https://github.com/brainylab/react-native-permissions#readme",
   "publishConfig": {
-    "registry": "https://registry.npmjs.org/"
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "devDependencies": {
     "@brainylab/eslint-config-react-native": "^0.0.6",
