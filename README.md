@@ -12,11 +12,22 @@ npm install @brainylab/react-native-permissions
 
 
 ```js
-import { multiply } from '@brainylab/react-native-permissions';
+import { useCameraPermission } from '@brainylab/react-native-permissions';
 
 // ...
 
-const result = multiply(3, 7);
+export default function App() {
+  const { status, requestPermission } = useCameraPermission();
+
+  return (
+    <View style={styles.container}>
+      <Text>Result: {status}</Text>
+      <TouchableOpacity style={styles.button} onPress={requestPermission}>
+        <Text>Request Permission</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
 ```
 
 ## Contributing
@@ -26,7 +37,3 @@ See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the 
 ## License
 
 MIT
-
----
-
-Made with [create-react-native-library](https://github.com/callstack/react-native-builder-bob)

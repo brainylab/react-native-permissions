@@ -1,14 +1,17 @@
-import * as React from 'react';
+import React from 'react';
+import { StyleSheet, View, Text, TouchableOpacity } from 'react-native';
 
-import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@brainylab/react-native-permissions';
-
-const result = multiply(3, 7);
+import { useCameraPermission } from '@brainylab/react-native-permissions';
 
 export default function App() {
+  const { status, requestPermission } = useCameraPermission();
+
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Result: {status}</Text>
+      <TouchableOpacity style={styles.button} onPress={requestPermission}>
+        <Text>Request Permission</Text>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -18,10 +21,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+    backgroundColor: 'white',
   },
-  box: {
-    width: 60,
-    height: 60,
-    marginVertical: 20,
+  button: {
+    marginTop: 40,
+    backgroundColor: 'green',
+    padding: 10,
   },
 });
