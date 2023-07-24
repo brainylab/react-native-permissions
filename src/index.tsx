@@ -1,11 +1,11 @@
-const ReactNativePermissions =
-  require('./NativeReactNativePermissions').default;
+import {default as ReactNativePermissions} from './NativeReactNativePermissions';
+
 import type {
   CameraPermissionStatus,
   CameraPermissionRequestResult,
 } from './NativeReactNativePermissions';
 
-export * from './hooks';
+export * from './hooks/useCameraPermission';
 
 export function getCameraPermissionStatus(): CameraPermissionStatus {
   return ReactNativePermissions.getCameraPermissionStatus();
