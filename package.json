@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/react-native-permissions",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Get Device Permissions",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
@@ -49,6 +49,7 @@
   "repository": "https://github.com/brainylab/react-native-permissions",
   "author": "André Felipe Schulle <dev@brainylab.com.br> (https://github.com/brainylab)",
   "license": "MIT",
+  "private": false,
   "bugs": {
     "url": "https://github.com/brainylab/react-native-permissions/issues"
   },
