@@ -1,6 +1,6 @@
 {
   "name": "@brainylab/react-native-permissions",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Get Device Permissions",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
