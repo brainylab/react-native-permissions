@@ -27,8 +27,7 @@ RCT_EXPORT_MODULE()
     return @"not-dethermined";
 }
 
-
-- (void)requestCameraPermission: resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
+- (void)requestCameraPermission:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
     RCTLogInfo(@"test");
 
     NSString *result = @"1";
