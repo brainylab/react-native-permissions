@@ -2,7 +2,7 @@
 
 This library was developed to support the new architecture of React Native - TurboModule, it does not support old versions of react native.
 
-> Support only New Architecture
+> Support only New Architecture an react-native > 0.71.0
 
 ## Installation
 
@@ -37,7 +37,7 @@ To request camera permission, you must first specify that your app requires came
 
 ### iOS
 Open your project's `Info.plist` and add the following lines inside the outermost `<dict>` tag:
-```plist
+```xml
 <key>NSCameraUsageDescription</key>
 <string>$(PRODUCT_NAME) needs access to your Camera.</string>
 ```
