@@ -1191,6 +1191,13 @@
     "@typescript-eslint/eslint-plugin" "^5.42.1"
     eslint-plugin-import-helpers "1.3.1"
 
+"@commitlint/config-conventional@^17.0.2":
+  version "17.6.7"
+  resolved "https://registry.yarnpkg.com/@commitlint/config-conventional/-/config-conventional-17.6.7.tgz#8469d977def36148615e9516b1a521e38ca27ddd"
+  integrity sha512-4oTpEUC0HRM54QRHBPMOJW1pETp7usxXn9RuNYNWHcmu8wi1mpws95hvS20u2n6HtIkTn0jfn7vHioCm4AGUTw==
+  dependencies:
+    conventional-changelog-conventionalcommits "^5.0.0"
+
 "@commitlint/config-validator@^17.6.7":
   version "17.6.7"
   resolved "https://registry.yarnpkg.com/@commitlint/config-validator/-/config-validator-17.6.7.tgz#c664d42a1ecf5040a3bb0843845150f55734df41"
@@ -1261,6 +1268,11 @@
   version "4.6.1"
   resolved "https://registry.yarnpkg.com/@eslint-community/regexpp/-/regexpp-4.6.1.tgz#0b371c118b8e4ebf9dbddb56120ab4befd791211"
   integrity sha512-O7x6dMstWLn2ktjcoiNLDkAGG2EjveHL+Vvc+n0fXumkJYAcSqcVYKtwDU+hDZ0uDUsnUagSYaZrOLAYE8un1A==
+
+"@evilmartians/lefthook@^1.2.2":
+  version "1.4.7"
+  resolved "https://registry.yarnpkg.com/@evilmartians/lefthook/-/lefthook-1.4.7.tgz#079fdf1ade0b0fb93f2239dae33f66a43b7a5472"
+  integrity sha512-tEYMcE4ei0e3thWVX1Jo9RC4nlR8g8OXxpLKL2grUbA5m5Ch8PWj1aP5lLPOmWUomwR0Gkbf4lDCPNdraU+qzg==
 
 "@hapi/hoek@^9.0.0":
   version "9.3.0"
@@ -3358,6 +3370,15 @@ conventional-changelog-conventionalcommits@^4.5.0:
   version "4.6.3"
   resolved "https://registry.yarnpkg.com/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-4.6.3.tgz#0765490f56424b46f6cb4db9135902d6e5a36dc2"
   integrity sha512-LTTQV4fwOM4oLPad317V/QNQ1FY4Hju5qeBIM1uTHbrnCE+Eg4CdRZ3gO2pUeR+tzWdp80M2j3qFFEDWVqOV4g==
+  dependencies:
+    compare-func "^2.0.0"
+    lodash "^4.17.15"
+    q "^1.5.1"
+
+conventional-changelog-conventionalcommits@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/conventional-changelog-conventionalcommits/-/conventional-changelog-conventionalcommits-5.0.0.tgz#41bdce54eb65a848a4a3ffdca93e92fa22b64a86"
+  integrity sha512-lCDbA+ZqVFQGUj7h9QBKoIpLhl8iihkO0nCTyRNzuXtcd7ubODpYB04IFy31JloiJgG0Uovu8ot8oxRzn7Nwtw==
   dependencies:
     compare-func "^2.0.0"
     lodash "^4.17.15"
