@@ -24,7 +24,6 @@ RCT_EXPORT_MODULE()
     return @"not-dethermined";
 }
 
-
 - (void)requestCameraPermission:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
       AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
       if(status == AVAuthorizationStatusAuthorized) {
