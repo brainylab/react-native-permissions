@@ -32,7 +32,6 @@ RCT_NEW_ARCH_ENABLED=1 bundle exec pod install
 ```
 
 # Camera Permission
-
 To request camera permission, you must first specify that your app requires camera permissions.
 
 ### iOS
@@ -47,7 +46,7 @@ Open your project's `AndroidManifest.xml` and add the following lines inside the
 <uses-permission android:name="android.permission.CAMERA" />
 ```
 
-## Example
+## Usage
 
 Use React Hook `useCameraPermission()`
 ```typescript
@@ -120,3 +119,7 @@ The source code for the example (showcase) app is under the Example/ directory. 
 ## License
 
 MIT
+
+---
+
+Development by [BrainyLab Development](https://brainylab.com.br)
