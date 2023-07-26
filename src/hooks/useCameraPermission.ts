@@ -1,8 +1,8 @@
-import { useState, useCallback } from 'react';
+import {useState, useCallback} from 'react';
 
-import { requestCameraPermission, getCameraPermissionStatus } from '../index';
+import {requestCameraPermission, getCameraPermissionStatus} from '../index';
 
-import type { CameraPermissionStatus } from '../NativeReactNativePermissions';
+import type {CameraPermissionStatus} from '../NativeReactNativePermissions';
 
 interface UseCameraPermission {
   status: CameraPermissionStatus;
@@ -13,7 +13,7 @@ export function useCameraPermission(): UseCameraPermission {
   const initialStatus = getCameraPermissionStatus();
 
   const [status, setStatus] = useState<CameraPermissionStatus>(
-    initialStatus || 'not-determined'
+    initialStatus || 'not-determined',
   );
 
   const requestPermission = useCallback(async () => {
@@ -22,5 +22,5 @@ export function useCameraPermission(): UseCameraPermission {
     setStatus(response);
   }, []);
 
-  return { status, requestPermission };
+  return {status, requestPermission};
 }

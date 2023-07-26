@@ -1,14 +1,38 @@
+#import <AVFoundation/AVFoundation.h>
+#import <React/RCTLog.h>
+
+#import "RNReactNativePermissionsSpec.h"
 #import "ReactNativePermissions.h"
 
 @implementation ReactNativePermissions
+
 RCT_EXPORT_MODULE()
+
 
 // Don't compile this code when we build for the old architecture.
 #ifdef RCT_NEW_ARCH_ENABLED
-- (NSNumber *)multiply:(double)a b:(double)b {
-    NSNumber *result = @(a * b);
+- (NSString *)getCameraPermissionStatus {
+    RCTLogInfo(@"test");
 
-    return result;
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+
+    if(status == AVAuthorizationStatusAuthorized) {
+      return @"authorized";
+    } else if(status == AVAuthorizationStatusDenied) {
+      return @"denied";
+    } else if(status == AVAuthorizationStatusRestricted) {
+      return @"restricted";
+    }
+
+    return @"not-dethermined";
+}
+
+
+- (void)requestCameraPermission: resolve:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
+    RCTLogInfo(@"test");
+
+    NSString *result = @"1";
+    resolve(result);
 }
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
