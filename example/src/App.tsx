@@ -1,21 +1,15 @@
 import React from 'react';
 import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 
-import {requestCameraPermission} from '@brainylab/react-native-permissions';
+import {useCameraPermission} from '@brainylab/react-native-permissions';
 
 export default function App() {
-  // const {status, requestPermission} = useCameraPermission();
-
-  const handleButton = async () => {
-    console.log('init');
-    const result = await requestCameraPermission();
-    console.log('finally', result);
-  };
+  const {status, requestPermission} = useCameraPermission();
 
   return (
     <View style={styles.container}>
-      {/* <Text>Result: {status}</Text> */}
-      <TouchableOpacity style={styles.button} onPress={handleButton}>
+      <Text>Result: {status}</Text>
+      <TouchableOpacity style={styles.button} onPress={requestPermission}>
         <Text>Request Permission</Text>
       </TouchableOpacity>
     </View>

@@ -7,7 +7,6 @@ export type CameraPermissionStatus =
   | 'denied'
   | 'restricted';
 export type CameraPermissionRequestResult = 'authorized' | 'denied';
-export type EventCameraName = 'CameraPermission';
 
 export interface Spec extends TurboModule {
   getCameraPermissionStatus(): CameraPermissionStatus;
