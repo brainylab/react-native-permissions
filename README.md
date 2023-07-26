@@ -112,6 +112,11 @@ const styles = StyleSheet.create({
 | `restricted`    | ✅  | ❌ |
 
 
+### Examples
+
+The source code for the example (showcase) app is under the Example/ directory. If you want to play with the API but don't feel like trying it on a real app, you can run the example project.
+
+
 ## License
 
 MIT

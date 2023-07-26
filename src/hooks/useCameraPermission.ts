@@ -1,7 +1,6 @@
 import {useState, useCallback} from 'react';
 
 import {requestCameraPermission, getCameraPermissionStatus} from '../index';
-
 import type {CameraPermissionStatus} from '../NativeReactNativePermissions';
 
 interface UseCameraPermission {
