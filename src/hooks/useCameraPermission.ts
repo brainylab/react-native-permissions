@@ -17,9 +17,7 @@ export function useCameraPermission(): UseCameraPermission {
   );
 
   const requestPermission = useCallback(async () => {
-    console.log('init');
     const response = await requestCameraPermission();
-    console.log('finally', response);
 
     setStatus(response);
   }, []);
