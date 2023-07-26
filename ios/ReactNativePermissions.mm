@@ -8,12 +8,9 @@
 
 RCT_EXPORT_MODULE()
 
-
 // Don't compile this code when we build for the old architecture.
 #ifdef RCT_NEW_ARCH_ENABLED
 - (NSString *)getCameraPermissionStatus {
-    RCTLogInfo(@"test");
-
     AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
 
     if(status == AVAuthorizationStatusAuthorized) {
@@ -28,10 +25,22 @@ RCT_EXPORT_MODULE()
 }
 
 - (void)requestCameraPermission:(RCTPromiseResolveBlock)resolve reject:(RCTPromiseRejectBlock)reject {
-    RCTLogInfo(@"test");
-
-    NSString *result = @"1";
-    resolve(result);
+      AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+      if(status == AVAuthorizationStatusAuthorized) {
+        resolve([self getCameraPermissionStatus]);
+        return;
+      } else {
+        [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo
+                                completionHandler:^(__unused BOOL granted) {
+            if(granted) {
+              resolve([self getCameraPermissionStatus]);
+              return;
+            } else {
+              resolve([self getCameraPermissionStatus]);
+              return;
+            }
+        }];
+      }
 }
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:

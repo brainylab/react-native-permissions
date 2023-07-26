@@ -1,12 +1,13 @@
-import type {
-  CameraPermissionStatus,
-  CameraPermissionRequestResult,
-} from './NativeReactNativePermissions';
+import ReactNativePermissions from './NativeReactNativePermissions';
+
+export type CameraPermissionStatus =
+  | 'authorized'
+  | 'not-determined'
+  | 'denied'
+  | 'restricted';
+export type CameraPermissionRequestResult = 'authorized' | 'denied';
 
 export * from './hooks/useCameraPermission';
-
-const ReactNativePermissions =
-  require('./NativeReactNativePermissions').default;
 
 export function getCameraPermissionStatus(): CameraPermissionStatus {
   return ReactNativePermissions.getCameraPermissionStatus();
