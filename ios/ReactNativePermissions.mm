@@ -21,7 +21,7 @@ RCT_EXPORT_MODULE()
       return @"restricted";
     }
 
-    return @"not-dethermined";
+    return @"not-determined";
 }
 
 
